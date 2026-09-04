@@ -1957,3 +1957,248 @@ img, svg, video, canvas, iframe {
   height: clamp(22px, 4vw, 28px) !important;
   width: auto !important;
 }
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal {
+  transform: translateY(30px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.92);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-scale.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* ==========================================================================
+   CONTACT PAGE — CARD BOX & MAP
+   ========================================================================== */
+.contact-card-box {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  padding: 40px;
+}
+
+@media (max-width: 576px) {
+  .contact-card-box {
+    padding: 24px;
+  }
+}
+
+/* Real Google Maps Embed Card */
+.contact-map-card {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-map-card iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+/* ==========================================================================
+   SOCIAL MEDIA BUTTONS
+   ========================================================================== */
+
+/* Footer icon-only circles */
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #0b0c0e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--color-primary-glow);
+}
+
+/* Contact page — pill-style social buttons */
+.contact-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 50px;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.contact-social-btn i {
+  font-size: 1rem;
+}
+
+/* Instagram — purple-pink gradient */
+.contact-social-icon:hover {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.45);
+}
+
+/* Facebook — blue */
+.contact-social-icon.contact-social-fb:hover {
+  background: #1877f2;
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.45);
+}
+
+/* YouTube — red */
+.contact-social-icon.contact-social-yt:hover {
+  background: #ff0000;
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.45);
+}
+
+/* X / Twitter — dark */
+.contact-social-icon.contact-social-x:hover {
+  background: #000;
+  border-color: #555;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon-only circular social button */
+.contact-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+/* ==========================================================================
+   FAQ ACCORDION — COMPACT BUTTON LAYOUT FIX
+   ========================================================================== */
+
+/* Override Bootstrap's default accordion button */
+#membershipFaqAccordion .accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  width: 100%;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 0.9rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Hide Bootstrap's built-in arrow (::after) */
+#membershipFaqAccordion .accordion-button::after {
+  display: none !important;
+}
+
+/* Question text — takes all remaining space */
+#membershipFaqAccordion .accordion-button .faq-question {
+  flex: 1;
+  text-align: left;
+}
+
+/* Custom arrow — sits tight right after the text */
+#membershipFaqAccordion .accordion-button .faq-arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-surface-3);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+#membershipFaqAccordion .accordion-button:not(.collapsed) .faq-arrow {
+  transform: rotate(180deg);
+  background: var(--color-primary);
+  color: #0b0c0e;
+}
+
+/* Accordion body padding */
+#membershipFaqAccordion .accordion-body {
+  padding: 0 20px 16px 20px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Remove focus ring */
+#membershipFaqAccordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  #membershipFaqAccordion .accordion-button {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+
+  #membershipFaqAccordion .accordion-body {
+    padding: 0 16px 14px 16px;
+  }
+}

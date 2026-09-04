@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchLevel = currentLevel === 'all' || cardLevel === currentLevel;
 
       if (matchCategory && matchLevel) {
-        card.style.display = 'block';
+        card.style.display = '';
+        card.style.visibility = 'visible';
         setTimeout(() => {
           card.style.opacity = '1';
           card.style.transform = 'scale(1)';
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = 'scale(0.95)';
         setTimeout(() => {
           card.style.display = 'none';
+          card.style.visibility = 'hidden';
         }, 300);
       }
     });
