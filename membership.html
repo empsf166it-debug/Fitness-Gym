@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plans | FitForge Performance Center</title>
+  <meta name="description" content="Choose your FitForge membership level. Transparent pricing with Starter, Performance, and Elite training tiers. No hidden contracts.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION (CONSISTENT)
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand navbar-brand-forge me-auto" href="index.html">
+          <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+          FIT<span>FORGE</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+            <li class="nav-item"><a class="nav-link active" href="membership.html">Membership</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-controls ms-auto">
+          <button class="btn-icon-toggle js-theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="membership.html" class="btn-forge btn-forge-primary btn-forge-sm d-none d-sm-inline-flex ms-2">
+            Join Now
+          </a>
+          <button class="navbar-toggler-forge js-drawer-open" aria-label="Open Navigation Drawer">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Right-Side Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a class="navbar-brand navbar-brand-forge" href="index.html">
+          FIT<span>FORGE</span>
+        </a>
+        <button class="btn-close-drawer js-drawer-close" aria-label="Close Drawer">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="trainers.html">Trainers</a>
+        <a class="nav-link active" href="membership.html">Membership</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-4">
+      <div class="text-center text-muted small">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       INNER HERO
+       ========================================== -->
+  <section class="inner-hero" style="background-image: url('assets/images/hero_membership.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow-label reveal">TRANSPARENT VALUE</span>
+      <h1 class="hero-title reveal stagger-1">Choose Your <span class="text-lime">Level</span></h1>
+      <p class="section-subtitle mx-auto text-center reveal stagger-2">
+        Flexible membership access engineered for commitment. No hidden fees or restrictive cancel policies.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRICING SECTION WITH SWITCHER
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Billing Toggle Switcher -->
+      <div class="d-flex align-items-center justify-content-center gap-3 mb-5 reveal">
+        <span class="fw-bold text-main">Monthly</span>
+        <div class="form-check form-switch m-0">
+          <input class="form-check-input" type="checkbox" id="billingToggle" style="width: 3.2em; height: 1.6em; cursor: pointer;">
+        </div>
+        <span class="fw-bold text-main d-flex align-items-center gap-2">
+          Yearly <span class="badge fw-black small text-uppercase" style="background-color: var(--color-primary); color: var(--btn-text-primary);">Save 20%</span>
+        </span>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="row g-4 align-items-stretch">
+        
+        <!-- Starter Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card reveal stagger-1">
+            <div class="pricing-header text-center">
+              <h3 class="pricing-name">STARTER</h3>
+              <div class="pricing-price" id="priceStarter">$39</div>
+              <p class="text-muted small mb-0 js-billing-period">/ month</p>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Standard Gym Access</li>
+              <li><i class="fas fa-check"></i> 4 Group Classes / Month</li>
+              <li><i class="fas fa-check"></i> Basic Fitness Assessment</li>
+              <li><i class="fas fa-check"></i> Community App Access</li>
+              <li class="text-muted opacity-50"><i class="fas fa-xmark text-muted"></i> Personal Training Session</li>
+              <li class="text-muted opacity-50"><i class="fas fa-xmark text-muted"></i> Priority Facility Booking</li>
+            </ul>
+            <a href="contact.html?plan=Starter" class="btn-forge btn-forge-outline w-100">Select Starter</a>
+          </div>
+        </div>
+
+        <!-- Performance Plan (Featured) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card featured reveal stagger-2">
+            <span class="popular-tag">MOST POPULAR</span>
+            <div class="pricing-header text-center">
+              <h3 class="pricing-name text-lime">PERFORMANCE</h3>
+              <div class="pricing-price" id="pricePerformance">$69</div>
+              <p class="text-muted small mb-0 js-billing-period">/ month</p>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check text-lime"></i> Unlimited Gym Access (24/7)</li>
+              <li><i class="fas fa-check text-lime"></i> Unlimited Group Classes</li>
+              <li><i class="fas fa-check text-lime"></i> Monthly Progress Review</li>
+              <li><i class="fas fa-check text-lime"></i> Customized Training Plan</li>
+              <li><i class="fas fa-check text-lime"></i> Priority Class Booking</li>
+              <li class="text-muted opacity-50"><i class="fas fa-xmark text-muted"></i> 1-on-1 Personal Coaching</li>
+            </ul>
+            <a href="contact.html?plan=Performance" class="btn-forge btn-forge-primary w-100">Get Performance</a>
+          </div>
+        </div>
+
+        <!-- Elite Plan -->
+        <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+          <div class="pricing-card reveal stagger-3">
+            <div class="pricing-header text-center">
+              <h3 class="pricing-name">ELITE</h3>
+              <div class="pricing-price" id="priceElite">$119</div>
+              <p class="text-muted small mb-0 js-billing-period">/ month</p>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Unlimited 24/7 Access</li>
+              <li><i class="fas fa-check"></i> 2 Private PT Sessions / Month</li>
+              <li><i class="fas fa-check"></i> Custom Nutrition Guidance</li>
+              <li><i class="fas fa-check"></i> Monthly Body Assessment (InBody)</li>
+              <li><i class="fas fa-check"></i> Infrared Sauna Recovery Access</li>
+              <li><i class="fas fa-check"></i> Priority 24/7 Support</li>
+            </ul>
+            <a href="contact.html?plan=Elite" class="btn-forge btn-forge-outline w-100">Select Elite</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: FAQ ACCORDION
+       ========================================== -->
+  <section class="section-padding bg-surface-1 border-top border-bottom border-secondary border-opacity-10">
+    <div class="container max-w-800">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow-label">QUESTIONS & ANSWERS</span>
+        <h2 class="section-title">Membership <span class="text-lime">FAQ</span></h2>
+      </div>
+
+      <div class="accordion accordion-flush" id="membershipFaqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="accordion-item bg-surface-2 border border-secondary border-opacity-25 rounded-3 mb-2 overflow-hidden reveal">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button bg-surface-2 text-main fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Are there long-term contracts or lock-in periods?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#membershipFaqAccordion">
+            <div class="accordion-body text-muted small">
+              No long-term contracts required for monthly plans. You can pause or cancel your recurring membership with a 14-day notice prior to your next billing cycle.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item bg-surface-2 border border-secondary border-opacity-25 rounded-3 mb-2 overflow-hidden reveal stagger-1">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button bg-surface-2 text-main fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Can I upgrade or downgrade my membership level later?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#membershipFaqAccordion">
+            <div class="accordion-body text-muted small">
+              Yes, you can upgrade from Starter to Performance or Elite at any time directly through your FitForge member dashboard. Pro-rated adjustments will be calculated automatically.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item bg-surface-2 border border-secondary border-opacity-25 rounded-3 mb-2 overflow-hidden reveal stagger-2">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button bg-surface-2 text-main fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              What are the gym operating hours for members?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#membershipFaqAccordion">
+            <div class="accordion-body text-muted small">
+              Performance and Elite members enjoy 24/7 keycard access. Standard operating staff hours are 5:00 AM – 10:00 PM Monday to Friday, and 6:00 AM – 8:00 PM on weekends.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item bg-surface-2 border border-secondary border-opacity-25 rounded-3 mb-2 overflow-hidden reveal stagger-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button bg-surface-2 text-main fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Do you offer day passes or trial sessions?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#membershipFaqAccordion">
+            <div class="accordion-body text-muted small">
+              Yes! We offer a 1-day guest pass for local residents. Visit our Contact page to schedule a guided facility tour and introductory workout.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: FINAL CTA
+       ========================================== -->
+  <section class="section-padding text-center">
+    <div class="container">
+      <div class="max-w-700 mx-auto reveal-scale">
+        <h2 class="section-title">Start Your <span class="text-lime">Transformation</span></h2>
+        <p class="section-subtitle mx-auto mb-4">
+          Join 500+ athletes who have redefined their strength and physical discipline at FitForge.
+        </p>
+        <a href="contact.html" class="btn-forge btn-forge-primary btn-lg">
+          Claim Your Pass <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER (CONSISTENT)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a class="navbar-brand navbar-brand-forge mb-3" href="index.html">
+            <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+            FIT<span>FORGE</span>
+          </a>
+          <p>FitForge is an elite performance facility dedicated to high-intensity training, strength development, and physical discipline.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-link" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About FitForge</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html">Strength Training</a></li>
+            <li><a href="programs.html">HIIT Conditioning</a></li>
+            <li><a href="programs.html">Functional Fitness</a></li>
+            <li><a href="programs.html">Muscle Building</a></li>
+            <li><a href="programs.html">Weight Loss</a></li>
+            <li><a href="programs.html">Athletic Prep</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title text-lime">Contact Center</h4>
+          <ul class="footer-links">
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-location-dot text-lime"></i> <span>245 Iron Avenue, Austin, TX 78701</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-phone text-lime"></i> <span>+1 (555) 248-9031</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-envelope text-lime"></i> <span>hello@fitforge.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-muted">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top js-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/membership.js"></script>
+</body>
+</html>

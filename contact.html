@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | FitForge Performance Center</title>
+  <meta name="description" content="Get in touch with FitForge Performance Center. Book a facility tour, schedule a consultation with a head coach, or ask questions about membership.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION (CONSISTENT)
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand navbar-brand-forge me-auto" href="index.html">
+          <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+          FIT<span>FORGE</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+            <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-controls ms-auto">
+          <button class="btn-icon-toggle js-theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="membership.html" class="btn-forge btn-forge-primary btn-forge-sm d-none d-sm-inline-flex ms-2">
+            Join Now
+          </a>
+          <button class="navbar-toggler-forge js-drawer-open" aria-label="Open Navigation Drawer">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Right-Side Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a class="navbar-brand navbar-brand-forge" href="index.html">
+          FIT<span>FORGE</span>
+        </a>
+        <button class="btn-close-drawer js-drawer-close" aria-label="Close Drawer">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="trainers.html">Trainers</a>
+        <a class="nav-link" href="membership.html">Membership</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-4">
+      <div class="text-center text-muted small">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       INNER HERO
+       ========================================== -->
+  <section class="inner-hero" style="background-image: url('assets/images/hero_contact.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow-label reveal">START TODAY</span>
+      <h1 class="hero-title reveal stagger-1">Let’s Start Your <span class="text-lime">Fitness Journey</span></h1>
+      <p class="section-subtitle mx-auto text-center reveal stagger-2">
+        Have questions about membership, training tracks, or personal coaching? Get in touch with our staff today.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT FORM & INFO SECTION
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Form Column (Left: Slides from left) -->
+        <div class="col-lg-7 reveal-left">
+          <div class="contact-card-box">
+            <span class="eyebrow-label">GET IN TOUCH</span>
+            <h2 class="section-title mb-4">Send Us A <span class="text-lime">Message</span></h2>
+            
+            <div id="contactAlertContainer"></div>
+
+            <form id="fitforgeContactForm" class="row g-3">
+              <div class="col-md-6 reveal stagger-1">
+                <label for="formName" class="form-label text-main">Full Name *</label>
+                <input type="text" class="form-control form-control-forge" id="formName" placeholder="e.g. Alex Sterling" required>
+              </div>
+
+              <div class="col-md-6 reveal stagger-2">
+                <label for="formEmail" class="form-label text-main">Email Address *</label>
+                <input type="email" class="form-control form-control-forge" id="formEmail" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="col-md-6 reveal stagger-3">
+                <label for="formPhone" class="form-label text-main">Phone Number</label>
+                <input type="tel" class="form-control form-control-forge" id="formPhone" placeholder="+1 (555) 000-0000">
+              </div>
+
+              <div class="col-md-6 reveal stagger-4">
+                <label for="formGoal" class="form-label text-main">Fitness Goal *</label>
+                <select class="form-select form-control-forge" id="formGoal" required>
+                  <option value="" selected disabled>Select your goal...</option>
+                  <option value="Strength">Barbell & Raw Strength</option>
+                  <option value="FatLoss">Fat Loss & Conditioning</option>
+                  <option value="Muscle">Hypertrophy & Muscle Gain</option>
+                  <option value="Athletic">Athletic Performance</option>
+                  <option value="Mobility">Mobility & Rehabilitation</option>
+                </select>
+              </div>
+
+              <div class="col-12 reveal stagger-1">
+                <label for="formProgram" class="form-label text-main">Preferred Program</label>
+                <select class="form-select form-control-forge" id="formProgram">
+                  <option value="General">General Facility Inquiry</option>
+                  <option value="Strength">Strength Training</option>
+                  <option value="HIIT">HIIT & Metabolic</option>
+                  <option value="Personal">1-on-1 Personal Training</option>
+                  <option value="Membership">Membership Inquiry</option>
+                </select>
+              </div>
+
+              <div class="col-12 reveal stagger-2">
+                <label for="formMessage" class="form-label text-main">Your Message *</label>
+                <textarea class="form-control form-control-forge" id="formMessage" rows="5" placeholder="Tell us about your fitness background and goals..." required></textarea>
+              </div>
+
+              <div class="col-12 reveal stagger-3 pt-2">
+                <button type="submit" class="btn-forge btn-forge-primary btn-lg w-100">
+                  Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Info Column (Right: Slides from right) -->
+        <div class="col-lg-5 reveal-right">
+          <div class="d-flex flex-column gap-4">
+            
+            <!-- Contact Cards -->
+            <div class="p-4 bg-surface-1 rounded-3 border border-secondary border-opacity-25 reveal stagger-1">
+              <h4 class="text-lime fs-5 mb-3"><i class="fas fa-location-dot me-2"></i> Visit Us</h4>
+              <p class="fw-bold mb-1">FitForge Performance Center</p>
+              <p class="text-muted small mb-0">245 Iron Avenue, Austin, TX 78701</p>
+            </div>
+
+            <div class="p-4 bg-surface-1 rounded-3 border border-secondary border-opacity-25 reveal stagger-2">
+              <h4 class="text-lime fs-5 mb-3"><i class="fas fa-headset me-2"></i> Call & Email</h4>
+              <p class="text-muted small mb-1"><strong class="text-main">Phone:</strong> +1 (555) 248-9031</p>
+              <p class="text-muted small mb-0"><strong class="text-main">Email:</strong> hello@fitforge.com</p>
+            </div>
+
+            <div class="p-4 bg-surface-1 rounded-3 border border-secondary border-opacity-25 reveal stagger-3">
+              <h4 class="text-lime fs-5 mb-3"><i class="fas fa-clock me-2"></i> Opening Hours</h4>
+              <div class="d-flex justify-content-between text-muted small mb-2 border-bottom border-secondary border-opacity-10 pb-2">
+                <span>Monday – Friday</span>
+                <strong class="text-main">5:00 AM – 10:00 PM</strong>
+              </div>
+              <div class="d-flex justify-content-between text-muted small mb-2 border-bottom border-secondary border-opacity-10 pb-2">
+                <span>Saturday</span>
+                <strong class="text-main">6:00 AM – 8:00 PM</strong>
+              </div>
+              <div class="d-flex justify-content-between text-muted small">
+                <span>Sunday</span>
+                <strong class="text-main">7:00 AM – 5:00 PM</strong>
+              </div>
+            </div>
+
+            <!-- Styled Map Visual Card -->
+            <div class="map-visual-card reveal-scale stagger-4">
+              <div class="map-pin">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-surface-1 bg-opacity-90 backdrop-blur border-top border-secondary border-opacity-25 text-center">
+                <p class="small fw-bold text-main mb-0">245 Iron Avenue, Austin TX</p>
+                <p class="small text-lime mb-0">FitForge Performance Hub</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER (CONSISTENT)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a class="navbar-brand navbar-brand-forge mb-3" href="index.html">
+            <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+            FIT<span>FORGE</span>
+          </a>
+          <p>FitForge is an elite performance facility dedicated to high-intensity training, strength development, and physical discipline.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-link" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About FitForge</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html">Strength Training</a></li>
+            <li><a href="programs.html">HIIT Conditioning</a></li>
+            <li><a href="programs.html">Functional Fitness</a></li>
+            <li><a href="programs.html">Muscle Building</a></li>
+            <li><a href="programs.html">Weight Loss</a></li>
+            <li><a href="programs.html">Athletic Prep</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title text-lime">Contact Center</h4>
+          <ul class="footer-links">
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-location-dot text-lime"></i> <span>245 Iron Avenue, Austin, TX 78701</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-phone text-lime"></i> <span>+1 (555) 248-9031</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-envelope text-lime"></i> <span>hello@fitforge.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-muted">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top js-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

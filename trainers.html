@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Trainers | FitForge Performance Center</title>
+  <meta name="description" content="Meet FitForge's elite coaching staff. Certified strength specialists, HIIT trainers, mobility experts, and nutrition coaches.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION (CONSISTENT)
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand navbar-brand-forge me-auto" href="index.html">
+          <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+          FIT<span>FORGE</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link active" href="trainers.html">Trainers</a></li>
+            <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-controls ms-auto">
+          <button class="btn-icon-toggle js-theme-toggle" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="membership.html" class="btn-forge btn-forge-primary btn-forge-sm d-none d-sm-inline-flex ms-2">
+            Join Now
+          </a>
+          <button class="navbar-toggler-forge js-drawer-open" aria-label="Open Navigation Drawer">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Right-Side Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a class="navbar-brand navbar-brand-forge" href="index.html">
+          FIT<span>FORGE</span>
+        </a>
+        <button class="btn-close-drawer js-drawer-close" aria-label="Close Drawer">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link active" href="trainers.html">Trainers</a>
+        <a class="nav-link" href="membership.html">Membership</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-4">
+      <div class="text-center text-muted small">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       INNER HERO
+       ========================================== -->
+  <section class="inner-hero" style="background-image: url('assets/images/hero_trainers.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow-label reveal">CERTIFIED PERFORMANCE COACHES</span>
+      <h1 class="hero-title reveal stagger-1">Train With <span class="text-lime">Experts</span></h1>
+      <p class="section-subtitle mx-auto text-center reveal stagger-2">
+        Work 1-on-1 with coaches who hold master certifications in biomechanics, sports nutrition, and Olympic lifting.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TRAINERS GRID & FILTER
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Trainer Category Filter -->
+      <div class="text-center mb-5 reveal">
+        <div class="filter-btn-group">
+          <button class="btn-filter js-trainer-filter active" data-filter="all">All Specialties</button>
+          <button class="btn-filter js-trainer-filter" data-filter="strength">Strength</button>
+          <button class="btn-filter js-trainer-filter" data-filter="hiit">HIIT</button>
+          <button class="btn-filter js-trainer-filter" data-filter="yoga">Mobility & Yoga</button>
+          <button class="btn-filter js-trainer-filter" data-filter="nutrition">Nutrition</button>
+          <button class="btn-filter js-trainer-filter" data-filter="athletic">Athletic Perf.</button>
+        </div>
+      </div>
+
+      <!-- Trainers Grid -->
+      <div class="row g-4" id="trainersGrid">
+        
+        <!-- Trainer 1 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="strength">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_marcus.jpg" alt="Marcus Vance" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">Head Strength Coach</div>
+              <h3 class="trainer-name">Marcus Vance</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> CSCS, USA Powerlifting L2</p>
+              <p class="trainer-exp mb-3">10+ Years Experience in barbell periodization and powerlifting coaching.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="Marcus Vance">Book With Marcus</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="hiit">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_elena.jpg" alt="Elena Rostova" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">HIIT & Metabolic Conditioning</div>
+              <h3 class="trainer-name">Elena Rostova</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> NASM-CPT, Kettlebell Athletics</p>
+              <p class="trainer-exp mb-3">Specializes in high-capacity VO2 max conditioning and interval programming.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="Elena Rostova">Book With Elena</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="yoga">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_jaxson.jpg" alt="Jaxson Cole" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">Functional Mobility & Recovery</div>
+              <h3 class="trainer-name">Jaxson Cole</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> FRCms, Yoga Alliance 500-HR</p>
+              <p class="trainer-exp mb-3">Expert in joint articular movement, myofascial release, and kinetic alignment.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="Jaxson Cole">Book With Jaxson</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 4 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="nutrition">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_maya.jpg" alt="Maya Lin" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">Sports Nutrition & Recomp</div>
+              <h3 class="trainer-name">Maya Lin</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> Precision Nutrition L2, CISSN</p>
+              <p class="trainer-exp mb-3">Designs targeted macronutrient strategies matching athletic expenditure.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="Maya Lin">Book With Maya</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 5 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="athletic">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_david.jpg" alt="David Miller" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">Combat & Endurance Coach</div>
+              <h3 class="trainer-name">David Miller</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> EXOS Performance Specialist</p>
+              <p class="trainer-exp mb-3">Focuses on rotational power, combat conditioning, and tactical endurance.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="David Miller">Book With David</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer 6 -->
+        <div class="col-lg-4 col-md-6 js-trainer-item" data-category="athletic">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/images/trainer_sarah.jpg" alt="Sarah Jenkins" loading="lazy">
+              <div class="trainer-socials">
+                <a href="#" class="trainer-social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="trainer-social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="trainer-info">
+              <div class="trainer-specialty">Athletic Development</div>
+              <h3 class="trainer-name">Sarah Jenkins</h3>
+              <p class="text-muted small mb-2"><i class="fas fa-certificate text-lime me-1"></i> NSCA-CPT, Track & Field L2</p>
+              <p class="trainer-exp mb-3">Spearheads acceleration mechanics, agility ladder work, and sprint form.</p>
+              <button class="btn-forge btn-forge-primary btn-forge-sm w-100 js-book-trainer" data-trainer-name="Sarah Jenkins">Book With Sarah</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: WHY COACHING MATTERS
+       ========================================== -->
+  <section class="section-padding bg-surface-1 border-top border-bottom border-secondary border-opacity-10">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-left">
+          <span class="eyebrow-label">THE FITFORGE DIFFERENCE</span>
+          <h2 class="section-title">Why Coaching <span class="text-lime">Matters</span></h2>
+          <p class="text-muted mb-4">
+            Solo training often leads to junk volume, unbalanced joint fatigue, and plateauing. Our certified coaches audit your form on every set.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="text-lime fs-4"><i class="fas fa-shield-halved"></i></div>
+              <div>
+                <h5 class="mb-0 fs-6">Injury Prevention & Form Audits</h5>
+                <p class="text-muted small mb-0">Biomechanical checks to protect your lumbar spine and rotator cuffs.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <div class="text-lime fs-4"><i class="fas fa-chart-line"></i></div>
+              <div>
+                <h5 class="mb-0 fs-6">Periodized Load Progression</h5>
+                <p class="text-muted small mb-0">Deload weeks and linear progression cycles to ensure long-term gains.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <div class="text-lime fs-4"><i class="fas fa-fire-flame-curved"></i></div>
+              <div>
+                <h5 class="mb-0 fs-6">Relentless Accountability</h5>
+                <p class="text-muted small mb-0">Direct check-ins ensuring you stick to your training and nutrition targets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal-right">
+          <img src="assets/images/coaching_feature.jpg" alt="Coaching session" class="img-fluid rounded-3 border border-secondary border-opacity-25 shadow-lg feature-section-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3 — TRAINER CONSULTATION CTA CARD
+       ========================================== -->
+  <section class="section-padding position-relative text-center" style="background-image: url('assets/images/hero_home.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-2">
+      <div class="p-4 p-md-5 rounded-4 bg-surface-1 border border-secondary border-opacity-25 shadow-lg max-w-900 mx-auto reveal-scale" style="backdrop-filter: blur(12px);">
+        <span class="eyebrow-label">TAKE THE NEXT STEP</span>
+        <h2 class="display-5 fw-black text-main mb-3">Ready to Train With an <span class="text-lime">Elite Coach?</span></h2>
+        <p class="fs-5 text-muted mb-4 mx-auto" style="max-width: 680px;">
+          Book your 1-on-1 fitness assessment today. Receive a custom movement audit, body composition breakdown, and personalized periodization plan.
+        </p>
+
+        <div class="row g-3 justify-content-center mb-4 text-start">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 p-3 bg-surface-2 rounded-3 border border-secondary border-opacity-25">
+              <i class="fas fa-circle-check text-lime fs-5"></i>
+              <span class="small fw-bold text-main">Free Initial Assessment</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 p-3 bg-surface-2 rounded-3 border border-secondary border-opacity-25">
+              <i class="fas fa-circle-check text-lime fs-5"></i>
+              <span class="small fw-bold text-main">Custom Biomechanics</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 p-3 bg-surface-2 rounded-3 border border-secondary border-opacity-25">
+              <i class="fas fa-circle-check text-lime fs-5"></i>
+              <span class="small fw-bold text-main">Flexible 1-on-1 Slots</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html?booking=consultation" class="btn-forge btn-forge-primary btn-lg">
+            Book Consultation Now <i class="fas fa-calendar-check"></i>
+          </a>
+          <a href="membership.html" class="btn-forge btn-forge-outline btn-lg">
+            Explore Membership <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER (CONSISTENT)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <a class="navbar-brand navbar-brand-forge mb-3" href="index.html">
+            <span class="brand-logo-icon"><img src="assets/images/logo.svg" alt="FitForge Logo"></span>
+            FIT<span>FORGE</span>
+          </a>
+          <p>FitForge is an elite performance facility dedicated to high-intensity training, strength development, and physical discipline.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-social-link" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About FitForge</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-title text-lime">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html">Strength Training</a></li>
+            <li><a href="programs.html">HIIT Conditioning</a></li>
+            <li><a href="programs.html">Functional Fitness</a></li>
+            <li><a href="programs.html">Muscle Building</a></li>
+            <li><a href="programs.html">Weight Loss</a></li>
+            <li><a href="programs.html">Athletic Prep</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title text-lime">Contact Center</h4>
+          <ul class="footer-links">
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-location-dot text-lime"></i> <span>245 Iron Avenue, Austin, TX 78701</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-phone text-lime"></i> <span>+1 (555) 248-9031</span></li>
+            <li class="d-flex gap-2 align-items-center"><i class="fas fa-envelope text-lime"></i> <span>hello@fitforge.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 FitForge Performance Center. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-muted">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top js-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/trainers.js"></script>
+</body>
+</html>
